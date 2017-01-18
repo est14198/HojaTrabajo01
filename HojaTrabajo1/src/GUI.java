@@ -11,6 +11,10 @@ import java.awt.GridLayout;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import javax.swing.JToggleButton;
+import javax.swing.border.TitledBorder;
+import javax.swing.UIManager;
+import java.awt.Color;
 
 /**
  * @author CHRISTOPHER SANDOVAL 13660 
@@ -39,6 +43,9 @@ public class GUI {
 	private JLabel lblMhz;
 	
 	private IRadio radio;
+	private JToggleButton tglbtnGuardar;
+	
+	private boolean guardar;
 	
 
 	/**
@@ -62,6 +69,7 @@ public class GUI {
 	 */
 	public GUI() {
 		initialize();
+		guardar = false;
 		radio = new RadioCool();
 		if(!radio.getEstado()){
 			lblMhz.setText("");
@@ -100,6 +108,10 @@ public class GUI {
 		
 		button = new JButton("1");
 		button.addActionListener(new ButtonListener());
+		
+		tglbtnGuardar = new JToggleButton("GUARDAR");
+		tglbtnGuardar.addActionListener(new ButtonListener());
+		panel_1.add(tglbtnGuardar);
 		panel_1.add(button);
 		
 		button_1 = new JButton("2");
@@ -147,6 +159,7 @@ public class GUI {
 		panel_1.add(button_11);
 		
 		JPanel panel_2 = new JPanel();
+		panel_2.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "RADIOS COOLeros\u2122", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		frame.getContentPane().add(panel_2, BorderLayout.CENTER);
 		panel_2.setLayout(new BorderLayout(0, 0));
 		
@@ -159,11 +172,11 @@ public class GUI {
 		frame.getContentPane().add(panel_3, BorderLayout.WEST);
 		panel_3.setLayout(new GridLayout(0, 1, 0, 0));
 		
-		button_12 = new JButton("\u2191");
+		button_12 = new JButton("\u25B2");
 		button_12.addActionListener(new ButtonListener());
 		panel_3.add(button_12);
 		
-		button_13 = new JButton("\u2193");
+		button_13 = new JButton("\u25BC");
 		button_13.addActionListener(new ButtonListener());
 		panel_3.add(button_13);
 	}
@@ -188,6 +201,116 @@ public class GUI {
 			}else if(e.getSource() == button_13){
 				radio.cambiar(false);
 				mostrarDisplay();
+			}else if(e.getSource() == tglbtnGuardar){
+				guardar=!guardar;
+			}else if(e.getSource() == button){
+				if(guardar){
+					radio.guardar(0);
+					tglbtnGuardar.setSelected(false);
+					guardar = !guardar;
+				}else{
+					radio.seleccionar(0);
+					mostrarDisplay();
+				}
+			}else if(e.getSource() == button_1){
+				if(guardar){
+					radio.guardar(1);
+					tglbtnGuardar.setSelected(false);
+					guardar = !guardar;
+				}else{
+					radio.seleccionar(1);
+					mostrarDisplay();
+				}
+			}else if(e.getSource() == button_2){
+				if(guardar){
+					radio.guardar(2);
+					tglbtnGuardar.setSelected(false);
+					guardar = !guardar;
+				}else{
+					radio.seleccionar(2);
+					mostrarDisplay();
+				}
+			}else if(e.getSource() == button_3){
+				if(guardar){
+					radio.guardar(3);
+					tglbtnGuardar.setSelected(false);
+					guardar = !guardar;
+				}else{
+					radio.seleccionar(3);
+					mostrarDisplay();
+				}
+			}else if(e.getSource() == button_4){
+				if(guardar){
+					radio.guardar(4);
+					tglbtnGuardar.setSelected(false);
+					guardar = !guardar;
+				}else{
+					radio.seleccionar(4);
+					mostrarDisplay();
+				}
+			}else if(e.getSource() == button_5){
+				if(guardar){
+					radio.guardar(5);
+					tglbtnGuardar.setSelected(false);
+					guardar = !guardar;
+				}else{
+					radio.seleccionar(5);
+					mostrarDisplay();
+				}
+			}else if(e.getSource() == button_6){
+				if(guardar){
+					radio.guardar(6);
+					tglbtnGuardar.setSelected(false);
+					guardar = !guardar;
+				}else{
+					radio.seleccionar(6);
+					mostrarDisplay();
+				}
+			}else if(e.getSource() == button_7){
+				if(guardar){
+					radio.guardar(7);
+					tglbtnGuardar.setSelected(false);
+					guardar = !guardar;
+				}else{
+					radio.seleccionar(7);
+					mostrarDisplay();
+				}
+			}else if(e.getSource() == button_8){
+				if(guardar){
+					radio.guardar(8);
+					tglbtnGuardar.setSelected(false);
+					guardar = !guardar;
+				}else{
+					radio.seleccionar(8);
+					mostrarDisplay();
+				}
+			}else if(e.getSource() == button_9){
+				if(guardar){
+					radio.guardar(9);
+					tglbtnGuardar.setSelected(false);
+					guardar = !guardar;
+				}else{
+					radio.seleccionar(9);
+					mostrarDisplay();
+				}
+			}else if(e.getSource() == button_10){
+				if(guardar){
+					radio.guardar(10);
+					tglbtnGuardar.setSelected(false);
+					guardar = !guardar;
+				}else{
+					radio.seleccionar(10);
+					mostrarDisplay();
+				}
+			}else if(e.getSource() == button_11){
+				if(guardar){
+					radio.guardar(11);
+					tglbtnGuardar.setSelected(false);
+					guardar = !guardar;
+				}else{
+					radio.seleccionar(11);
+					mostrarDisplay();
+				}
 			}
 		}
 	}

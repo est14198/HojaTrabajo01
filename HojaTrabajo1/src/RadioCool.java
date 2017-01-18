@@ -16,13 +16,15 @@ public class RadioCool implements IRadio {
 	private float emisora;
 	private boolean encendido;
 	private boolean frecuencia;
-	private float[] emisorasFavoritas;
+	private float[] emisorasFavoritasAM;
+	private float[] emisorasFavoritasFM;
 	
 	public RadioCool(){
 		encendido = false;
 		frecuencia = false;
 		emisora = 530.0F;
-		emisorasFavoritas = new float[12];
+		emisorasFavoritasAM = new float[12];
+		emisorasFavoritasFM = new float[12];
 	}
 
 	@Override
@@ -76,14 +78,26 @@ public class RadioCool implements IRadio {
 	@Override
 	public void guardar(int indx) {
 		if(encendido){
-			emisorasFavoritas[indx] = emisora;
+			if(!frecuencia){
+				emisorasFavoritasAM[indx] = emisora;
+			}else{
+				emisorasFavoritasFM[indx] = emisora;
+			}
 		}
 	}
 
 	@Override
 	public void seleccionar(int indx) {
 		if(encendido){
-			emisora = emisorasFavoritas[indx];
+			if(!frecuencia){
+				if(emisorasFavoritasAM[indx] != 0){
+					emisora = emisorasFavoritasAM[indx];
+				}
+			}else{
+				if(emisorasFavoritasFM[indx] != 0){
+					emisora = emisorasFavoritasFM[indx];
+				}
+			}
 		}
 	}
 
