@@ -3,7 +3,7 @@
  * Universidad del Valle de Guatemala
  * @since 1/17/2017
  * @author CHRISTOPHER SANDOVAL 13660
- * Hoja de Trabajo 1. Algoritmos y Estructura de Datos
+ * Hoja de Trabajo 1. Algoritmos y Estructura de Datos (k)
  * Interfaz grafica
  */
 
