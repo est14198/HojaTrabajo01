@@ -1,5 +1,5 @@
 /**
- * IRadio.java
+ * iRadio.java
  * Universidad del Valle de Guatemala
  * @since 1/17/2017
  * @author FER ESTRADA 14198
@@ -9,7 +9,7 @@
 
 
 
-public interface IRadio {
+public interface iRadio {
 	
     /**
      * pre: verifica el estado inicial

@@ -9,7 +9,7 @@
 
 
 
-public class RadioCool implements IRadio {
+public class RadioCool implements iRadio {
 	
 	/**
 	 * Atributos
