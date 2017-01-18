@@ -13,6 +13,7 @@ import javax.swing.SwingConstants;
 
 /**
  * @author CHRISTOPHER SANDOVAL 13660
+ * 
  *
  */
 public class GUI {
