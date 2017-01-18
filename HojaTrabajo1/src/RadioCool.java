@@ -6,7 +6,7 @@
 
 /**
  *
- * @author FER ESTRADA
+ * @author FER ESTRADA & CHRISTOPHER SANDOVAL
  */
 public class RadioCool implements IRadio {
 	

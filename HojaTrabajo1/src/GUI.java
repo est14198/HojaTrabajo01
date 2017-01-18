@@ -11,6 +11,10 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 
+/**
+ * @author CHRISTOPHER SANDOVAL
+ *
+ */
 public class GUI {
 
 	private JFrame frame;
