@@ -15,6 +15,8 @@ public class GUI {
 
 	private JFrame frame;
 	private JButton button;
+	private JButton button_1;
+	private JButton button_2;
 
 	/**
 	 * Launch the application.
@@ -67,10 +69,10 @@ public class GUI {
 		button = new JButton("1");
 		panel_1.add(button);
 		
-		JButton button_1 = new JButton("2");
+		button_1 = new JButton("2");
 		panel_1.add(button_1);
 		
-		JButton button_2 = new JButton("3");
+		button_2 = new JButton("3");
 		panel_1.add(button_2);
 		
 		JButton button_3 = new JButton("4");
