@@ -1,3 +1,5 @@
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -30,38 +32,42 @@ public class RadioCool implements IRadio {
 
 	@Override
 	public void frecuencia() {
-		frecuencia = !frecuencia;
-		if(!frecuencia){
-			emisora = 530.0F;
-		}else{
-			emisora = 87.9F;
+		if(encendido){
+			frecuencia = !frecuencia;
+			if(!frecuencia){
+				emisora = 530.0F;
+			}else{
+				emisora = 87.9F;
+			}
 		}
 	}
 
 	@Override
 	public void cambiar(boolean subir) {
-		if(subir){
-			if(!frecuencia){
-				emisora += 10.0F;
-				if(emisora>1610.0F){
-					emisora = 530.0F;
+		if(encendido){
+			if(subir){
+				if(!frecuencia){
+					emisora += 10.0F;
+					if(emisora>1610.0F){
+						emisora = 530.0F;
+					}
+				}else{
+					emisora += 0.2F;
+					if(emisora>107.9F){
+						emisora = 87.9F;
+					}
 				}
 			}else{
-				emisora += 0.2F;
-				if(emisora>107.9F){
-					emisora = 87.9F;
-				}
-			}
-		}else{
-			if(!frecuencia){
-				emisora -= 10.0F;
-				if(emisora<530.0F){
-					emisora = 1610.0F;
-				}
-			}else{
-				emisora -= 0.2F;
-				if(emisora<87.9F){
-					emisora = 107.9F;
+				if(!frecuencia){
+					emisora -= 10.0F;
+					if(emisora<530.0F){
+						emisora = 1610.0F;
+					}
+				}else{
+					emisora -= 0.2F;
+					if(emisora<87.9F){
+						emisora = 107.9F;
+					}
 				}
 			}
 		}
@@ -69,12 +75,16 @@ public class RadioCool implements IRadio {
 
 	@Override
 	public void guardar(int indx) {
-		emisorasFavoritas[indx] = emisora;
+		if(encendido){
+			emisorasFavoritas[indx] = emisora;
+		}
 	}
 
 	@Override
 	public void seleccionar(int indx) {
-		emisora = emisorasFavoritas[indx];
+		if(encendido){
+			emisora = emisorasFavoritas[indx];
+		}
 	}
 
 	@Override
