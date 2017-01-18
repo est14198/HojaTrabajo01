@@ -5,9 +5,18 @@
  */
 
 /**
- *
+ * Universidad del Valle de Guatemala
+ * @since 1/17/2017
  * @author FER ESTRADA
+ * 
  */
-public class IRadio {
-    
+public interface IRadio {
+    public void estado() ;
+    public void frecuencia() ;
+    public void cambiar(boolean subir) ;
+    public void guardar(int indx) ;
+    public void seleccionar(int indx) ;
+    public boolean getEstado() ;
+    public boolean getFrecuencia() ;
+    public float getEmisora();
 }
