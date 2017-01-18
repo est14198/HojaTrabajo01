@@ -4,7 +4,7 @@
  * @since 1/17/2017
  * @author FER ESTRADA 14198
  * Hoja de Trabajo 1. Algoritmos y Estructura de Datos
- * Interfaz de una radio
+ * Interfaz de una radio 
  */
 
 
