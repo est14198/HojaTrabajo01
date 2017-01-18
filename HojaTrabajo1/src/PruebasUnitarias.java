@@ -19,7 +19,7 @@ public class PruebasUnitarias {
 	/**
 	 * Test de cambio de estado de la radio
 	 */
-	public void test1() {
+	public void test1MetodoCambiodeEstado() {
 		RadioCool miRadio = new RadioCool();
 		boolean estadoInicial = miRadio.getEstado();
 		miRadio.estado();
@@ -32,7 +32,7 @@ public class PruebasUnitarias {
 	/**
 	 * Test de guardado de emisora
 	 */
-	public void test2() {
+	public void test2MetodoGuardandoEmisora() {
 		RadioCool miRadio = new RadioCool();
 		miRadio.estado();
 		float emisoraPorGuardar = miRadio.getEmisora();
@@ -49,7 +49,7 @@ public class PruebasUnitarias {
 	/**
 	 * Test cambio de emisora
 	 */
-	public void test3() {
+	public void test3MetodoCambiodeEmisoraAM() {
 		RadioCool miRadio = new RadioCool();
 		miRadio.estado();
 		float emisoraInicial = miRadio.getEmisora();

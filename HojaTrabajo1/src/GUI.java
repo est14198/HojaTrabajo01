@@ -184,7 +184,7 @@ public class GUI {
 		panel_1.add(bF12);
 		
 		JPanel panel_2 = new JPanel();
-		panel_2.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "RADIOS COOLeros\u2122", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel_2.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "RADIOS COOL\u2122", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		frame.getContentPane().add(panel_2, BorderLayout.CENTER);
 		panel_2.setLayout(new BorderLayout(0, 0));
 		
