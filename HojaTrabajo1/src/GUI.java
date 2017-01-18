@@ -22,6 +22,20 @@ public class GUI {
 	private JButton button;
 	private JButton button_1;
 	private JButton button_2;
+	private JButton button_3;
+	private JButton button_4;
+	private JButton button_5;
+	private JButton button_6;
+	private JButton button_7;
+	private JButton button_8;
+	private JButton button_9;
+	private JButton button_10;
+	private JButton button_11;
+	private JButton button_12;
+	private JButton button_13;
+	private JLabel lblMhz;
+	
+	
 
 	/**
 	 * Launch the application.
@@ -80,38 +94,38 @@ public class GUI {
 		button_2 = new JButton("3");
 		panel_1.add(button_2);
 		
-		JButton button_3 = new JButton("4");
+		button_3 = new JButton("4");
 		panel_1.add(button_3);
 		
-		JButton button_4 = new JButton("5");
+		button_4 = new JButton("5");
 		panel_1.add(button_4);
 		
-		JButton button_5 = new JButton("6");
+		button_5 = new JButton("6");
 		panel_1.add(button_5);
 		
-		JButton button_6 = new JButton("7");
+		button_6 = new JButton("7");
 		panel_1.add(button_6);
 		
-		JButton button_7 = new JButton("8");
+		button_7 = new JButton("8");
 		panel_1.add(button_7);
 		
-		JButton button_8 = new JButton("9");
+		button_8 = new JButton("9");
 		panel_1.add(button_8);
 		
-		JButton button_9 = new JButton("10");
+		button_9 = new JButton("10");
 		panel_1.add(button_9);
 		
-		JButton button_10 = new JButton("11");
+		button_10 = new JButton("11");
 		panel_1.add(button_10);
 		
-		JButton button_11 = new JButton("12");
+		button_11 = new JButton("12");
 		panel_1.add(button_11);
 		
 		JPanel panel_2 = new JPanel();
 		frame.getContentPane().add(panel_2, BorderLayout.CENTER);
 		panel_2.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblMhz = new JLabel("100.0 MHz");
+		lblMhz = new JLabel("530.0 kHz");
 		lblMhz.setHorizontalAlignment(SwingConstants.CENTER);
 		lblMhz.setFont(new Font("Courier New", Font.BOLD, 70));
 		panel_2.add(lblMhz);
@@ -120,11 +134,11 @@ public class GUI {
 		frame.getContentPane().add(panel_3, BorderLayout.WEST);
 		panel_3.setLayout(new GridLayout(0, 1, 0, 0));
 		
-		JButton button_12 = new JButton("\u2191");
+		button_12 = new JButton("\u2191");
 		panel_3.add(button_12);
 		
-		JButton btnNewButton_1 = new JButton("\u2193");
-		panel_3.add(btnNewButton_1);
+		button_13 = new JButton("\u2193");
+		panel_3.add(button_13);
 	}
 
 }
