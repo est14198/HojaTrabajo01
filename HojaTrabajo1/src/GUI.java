@@ -1,3 +1,17 @@
+/**
+ * GUI.java
+ * Universidad del Valle de Guatemala
+ * @since 1/17/2017
+ * @author CHRISTOPHER SANDOVAL 13660
+ * Hoja de Trabajo 1. Algoritmos y Estructura de Datos
+ * Interfaz grafica
+ */
+
+
+
+/**
+ * Importaciones
+ */
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -16,13 +30,12 @@ import javax.swing.border.TitledBorder;
 import javax.swing.UIManager;
 import java.awt.Color;
 
-/**
- * @author CHRISTOPHER SANDOVAL 13660
- * 
- *
- */
-public class GUI {
 
+public class GUI {
+	
+	/**
+	 * Botones
+	 */
 	private JFrame frame;
 	private JButton bF1;
 	private JButton bF2;
@@ -43,8 +56,14 @@ public class GUI {
 	private JLabel lblEmisora;
 	private JToggleButton tglbtnGuardar;
 	
+	/**
+	 * Atributo de la interfaz radio
+	 */
 	private IRadio radio;
-
+	
+	/**
+	 * Atributo para guardar emisora
+	 */
 	private boolean guardar;
 	
 
@@ -71,6 +90,9 @@ public class GUI {
 		initialize();
 		guardar = false;
 		radio = new RadioCool();
+		/**
+		 * Verifica que el boton encendido este TRUE para mostrar el lbl.
+		 */
 		if(!radio.getEstado()){
 			lblEmisora.setText("");
 		}else{
@@ -80,7 +102,6 @@ public class GUI {
 				lblEmisora.setText("FM: " + radio.getEmisora()+"MHz");
 			}
 		}
-		
 	}
 
 	/**
@@ -93,6 +114,10 @@ public class GUI {
 		
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.NORTH);
+		
+		/**
+		 * Se crean ActionListeners para todos los botones
+		 */
 		
 		bEncendido = new JButton("ON/OFF");
 		bEncendido.addActionListener(new ButtonListener());
@@ -181,10 +206,16 @@ public class GUI {
 		panel_3.add(bBajar);
 	}
 	
+	/**
+	 * Implementando ActionListener.
+	 */
 	private class ButtonListener implements ActionListener{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			/**
+			 * Busca el source del boton y realiza la operacion indicada
+			 */
 			if(e.getSource() == bEncendido){
 				radio.estado();
 				if(!radio.getEstado()){
@@ -315,6 +346,9 @@ public class GUI {
 		}
 	}
 	
+	/**
+	 * Metodo para mostrar la emisora actual en el lbl. Si el boton esta OFF, no realiza ninguna operacion.
+	 */
 	private void mostrarDisplay(){
 		DecimalFormat df = new DecimalFormat("#.#");
 		if(radio.getEstado()){
