@@ -14,6 +14,7 @@ import javax.swing.SwingConstants;
 public class GUI {
 
 	private JFrame frame;
+	private JButton button;
 
 	/**
 	 * Launch the application.
@@ -63,7 +64,7 @@ public class GUI {
 		JPanel panel_1 = new JPanel();
 		frame.getContentPane().add(panel_1, BorderLayout.SOUTH);
 		
-		JButton button = new JButton("1");
+		button = new JButton("1");
 		panel_1.add(button);
 		
 		JButton button_1 = new JButton("2");
