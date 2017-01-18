@@ -17,7 +17,7 @@ import javax.swing.UIManager;
 import java.awt.Color;
 
 /**
- * @author CHRISTOPHER SANDOVAL 13660 
+ * @author CHRISTOPHER SANDOVAL 13660
  * 
  *
  */
