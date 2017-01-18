@@ -12,7 +12,7 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 
 /**
- * @author CHRISTOPHER SANDOVAL 13660
+ * @author CHRISTOPHER SANDOVAL 13660 
  * 
  *
  */
