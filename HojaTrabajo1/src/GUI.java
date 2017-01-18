@@ -24,27 +24,27 @@ import java.awt.Color;
 public class GUI {
 
 	private JFrame frame;
-	private JButton button;
-	private JButton button_1;
-	private JButton button_2;
-	private JButton button_3;
-	private JButton button_4;
-	private JButton button_5;
-	private JButton button_6;
-	private JButton button_7;
-	private JButton button_8;
-	private JButton button_9;
-	private JButton button_10;
-	private JButton button_11;
-	private JButton button_12;
-	private JButton button_13;
-	private JButton btnONOFF;
-	private JButton btnAmfm;
-	private JLabel lblMhz;
-	
-	private IRadio radio;
+	private JButton bF1;
+	private JButton bF2;
+	private JButton bF3;
+	private JButton bF4;
+	private JButton bF5;
+	private JButton bF6;
+	private JButton bF7;
+	private JButton bF8;
+	private JButton bF9;
+	private JButton bF10;
+	private JButton bF11;
+	private JButton bF12;
+	private JButton bSubir;
+	private JButton bBajar;
+	private JButton bEncendido;
+	private JButton bFrecuencia;
+	private JLabel lblEmisora;
 	private JToggleButton tglbtnGuardar;
 	
+	private IRadio radio;
+
 	private boolean guardar;
 	
 
@@ -72,12 +72,12 @@ public class GUI {
 		guardar = false;
 		radio = new RadioCool();
 		if(!radio.getEstado()){
-			lblMhz.setText("");
+			lblEmisora.setText("");
 		}else{
 			if(!radio.getFrecuencia()){
-				lblMhz.setText("AM: " + radio.getEmisora()+"kHz");
+				lblEmisora.setText("AM: " + radio.getEmisora()+"kHz");
 			}else{
-				lblMhz.setText("FM: " + radio.getEmisora()+"MHz");
+				lblEmisora.setText("FM: " + radio.getEmisora()+"MHz");
 			}
 		}
 		
@@ -94,116 +94,116 @@ public class GUI {
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.NORTH);
 		
-		btnONOFF = new JButton("ON/OFF");
-		btnONOFF.addActionListener(new ButtonListener());
+		bEncendido = new JButton("ON/OFF");
+		bEncendido.addActionListener(new ButtonListener());
 		panel.setLayout(new BorderLayout(0, 0));
-		panel.add(btnONOFF, BorderLayout.WEST);
+		panel.add(bEncendido, BorderLayout.WEST);
 		
-		btnAmfm = new JButton("AM/FM");
-		btnAmfm.addActionListener(new ButtonListener());
-		panel.add(btnAmfm, BorderLayout.EAST);
+		bFrecuencia = new JButton("AM/FM");
+		bFrecuencia.addActionListener(new ButtonListener());
+		panel.add(bFrecuencia, BorderLayout.EAST);
 		
 		JPanel panel_1 = new JPanel();
 		frame.getContentPane().add(panel_1, BorderLayout.SOUTH);
 		
-		button = new JButton("1");
-		button.addActionListener(new ButtonListener());
+		bF1 = new JButton("1");
+		bF1.addActionListener(new ButtonListener());
 		
 		tglbtnGuardar = new JToggleButton("GUARDAR");
 		tglbtnGuardar.addActionListener(new ButtonListener());
 		panel_1.add(tglbtnGuardar);
-		panel_1.add(button);
+		panel_1.add(bF1);
 		
-		button_1 = new JButton("2");
-		button_1.addActionListener(new ButtonListener());
-		panel_1.add(button_1);
+		bF2 = new JButton("2");
+		bF2.addActionListener(new ButtonListener());
+		panel_1.add(bF2);
 		
-		button_2 = new JButton("3");
-		button_2.addActionListener(new ButtonListener());
-		panel_1.add(button_2);
+		bF3 = new JButton("3");
+		bF3.addActionListener(new ButtonListener());
+		panel_1.add(bF3);
 		
-		button_3 = new JButton("4");
-		button_3.addActionListener(new ButtonListener());
-		panel_1.add(button_3);
+		bF4 = new JButton("4");
+		bF4.addActionListener(new ButtonListener());
+		panel_1.add(bF4);
 		
-		button_4 = new JButton("5");
-		button_4.addActionListener(new ButtonListener());
-		panel_1.add(button_4);
+		bF5 = new JButton("5");
+		bF5.addActionListener(new ButtonListener());
+		panel_1.add(bF5);
 		
-		button_5 = new JButton("6");
-		button_5.addActionListener(new ButtonListener());
-		panel_1.add(button_5);
+		bF6 = new JButton("6");
+		bF6.addActionListener(new ButtonListener());
+		panel_1.add(bF6);
 		
-		button_6 = new JButton("7");
-		button_6.addActionListener(new ButtonListener());
-		panel_1.add(button_6);
+		bF7 = new JButton("7");
+		bF7.addActionListener(new ButtonListener());
+		panel_1.add(bF7);
 		
-		button_7 = new JButton("8");
-		button_7.addActionListener(new ButtonListener());
-		panel_1.add(button_7);
+		bF8 = new JButton("8");
+		bF8.addActionListener(new ButtonListener());
+		panel_1.add(bF8);
 		
-		button_8 = new JButton("9");
-		button_8.addActionListener(new ButtonListener());
-		panel_1.add(button_8);
+		bF9 = new JButton("9");
+		bF9.addActionListener(new ButtonListener());
+		panel_1.add(bF9);
 		
-		button_9 = new JButton("10");
-		button_9.addActionListener(new ButtonListener());
-		panel_1.add(button_9);
+		bF10 = new JButton("10");
+		bF10.addActionListener(new ButtonListener());
+		panel_1.add(bF10);
 		
-		button_10 = new JButton("11");
-		button_10.addActionListener(new ButtonListener());
-		panel_1.add(button_10);
+		bF11 = new JButton("11");
+		bF11.addActionListener(new ButtonListener());
+		panel_1.add(bF11);
 		
-		button_11 = new JButton("12");
-		button_11.addActionListener(new ButtonListener());
-		panel_1.add(button_11);
+		bF12 = new JButton("12");
+		bF12.addActionListener(new ButtonListener());
+		panel_1.add(bF12);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "RADIOS COOLeros\u2122", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		frame.getContentPane().add(panel_2, BorderLayout.CENTER);
 		panel_2.setLayout(new BorderLayout(0, 0));
 		
-		lblMhz = new JLabel("530.0 kHz");
-		lblMhz.setHorizontalAlignment(SwingConstants.CENTER);
-		lblMhz.setFont(new Font("Courier New", Font.BOLD, 70));
-		panel_2.add(lblMhz);
+		lblEmisora = new JLabel("530.0 kHz");
+		lblEmisora.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEmisora.setFont(new Font("Courier New", Font.BOLD, 70));
+		panel_2.add(lblEmisora);
 		
 		JPanel panel_3 = new JPanel();
 		frame.getContentPane().add(panel_3, BorderLayout.WEST);
 		panel_3.setLayout(new GridLayout(0, 1, 0, 0));
 		
-		button_12 = new JButton("\u25B2");
-		button_12.addActionListener(new ButtonListener());
-		panel_3.add(button_12);
+		bSubir = new JButton("\u25B2");
+		bSubir.addActionListener(new ButtonListener());
+		panel_3.add(bSubir);
 		
-		button_13 = new JButton("\u25BC");
-		button_13.addActionListener(new ButtonListener());
-		panel_3.add(button_13);
+		bBajar = new JButton("\u25BC");
+		bBajar.addActionListener(new ButtonListener());
+		panel_3.add(bBajar);
 	}
 	
 	private class ButtonListener implements ActionListener{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			if(e.getSource() == btnONOFF){
+			if(e.getSource() == bEncendido){
 				radio.estado();
 				if(!radio.getEstado()){
-					lblMhz.setText("");
+					lblEmisora.setText("");
 				}else{
 					mostrarDisplay();
 				}
-			}else if(e.getSource() == btnAmfm){
+			}else if(e.getSource() == bFrecuencia){
 				radio.frecuencia();
 				mostrarDisplay();
-			}else if(e.getSource() == button_12){
+			}else if(e.getSource() == bSubir){
 				radio.cambiar(true);
 				mostrarDisplay();
-			}else if(e.getSource() == button_13){
+			}else if(e.getSource() == bBajar){
 				radio.cambiar(false);
 				mostrarDisplay();
 			}else if(e.getSource() == tglbtnGuardar){
 				guardar=!guardar;
-			}else if(e.getSource() == button){
+			}else if(e.getSource() == bF1){
 				if(guardar){
 					radio.guardar(0);
 					tglbtnGuardar.setSelected(false);
@@ -212,7 +212,7 @@ public class GUI {
 					radio.seleccionar(0);
 					mostrarDisplay();
 				}
-			}else if(e.getSource() == button_1){
+			}else if(e.getSource() == bF2){
 				if(guardar){
 					radio.guardar(1);
 					tglbtnGuardar.setSelected(false);
@@ -221,7 +221,7 @@ public class GUI {
 					radio.seleccionar(1);
 					mostrarDisplay();
 				}
-			}else if(e.getSource() == button_2){
+			}else if(e.getSource() == bF3){
 				if(guardar){
 					radio.guardar(2);
 					tglbtnGuardar.setSelected(false);
@@ -230,7 +230,7 @@ public class GUI {
 					radio.seleccionar(2);
 					mostrarDisplay();
 				}
-			}else if(e.getSource() == button_3){
+			}else if(e.getSource() == bF4){
 				if(guardar){
 					radio.guardar(3);
 					tglbtnGuardar.setSelected(false);
@@ -239,7 +239,7 @@ public class GUI {
 					radio.seleccionar(3);
 					mostrarDisplay();
 				}
-			}else if(e.getSource() == button_4){
+			}else if(e.getSource() == bF5){
 				if(guardar){
 					radio.guardar(4);
 					tglbtnGuardar.setSelected(false);
@@ -248,7 +248,7 @@ public class GUI {
 					radio.seleccionar(4);
 					mostrarDisplay();
 				}
-			}else if(e.getSource() == button_5){
+			}else if(e.getSource() == bF6){
 				if(guardar){
 					radio.guardar(5);
 					tglbtnGuardar.setSelected(false);
@@ -257,7 +257,7 @@ public class GUI {
 					radio.seleccionar(5);
 					mostrarDisplay();
 				}
-			}else if(e.getSource() == button_6){
+			}else if(e.getSource() == bF7){
 				if(guardar){
 					radio.guardar(6);
 					tglbtnGuardar.setSelected(false);
@@ -266,7 +266,7 @@ public class GUI {
 					radio.seleccionar(6);
 					mostrarDisplay();
 				}
-			}else if(e.getSource() == button_7){
+			}else if(e.getSource() == bF8){
 				if(guardar){
 					radio.guardar(7);
 					tglbtnGuardar.setSelected(false);
@@ -275,7 +275,7 @@ public class GUI {
 					radio.seleccionar(7);
 					mostrarDisplay();
 				}
-			}else if(e.getSource() == button_8){
+			}else if(e.getSource() == bF9){
 				if(guardar){
 					radio.guardar(8);
 					tglbtnGuardar.setSelected(false);
@@ -284,7 +284,7 @@ public class GUI {
 					radio.seleccionar(8);
 					mostrarDisplay();
 				}
-			}else if(e.getSource() == button_9){
+			}else if(e.getSource() == bF10){
 				if(guardar){
 					radio.guardar(9);
 					tglbtnGuardar.setSelected(false);
@@ -293,7 +293,7 @@ public class GUI {
 					radio.seleccionar(9);
 					mostrarDisplay();
 				}
-			}else if(e.getSource() == button_10){
+			}else if(e.getSource() == bF11){
 				if(guardar){
 					radio.guardar(10);
 					tglbtnGuardar.setSelected(false);
@@ -302,7 +302,7 @@ public class GUI {
 					radio.seleccionar(10);
 					mostrarDisplay();
 				}
-			}else if(e.getSource() == button_11){
+			}else if(e.getSource() == bF12){
 				if(guardar){
 					radio.guardar(11);
 					tglbtnGuardar.setSelected(false);
@@ -319,9 +319,9 @@ public class GUI {
 		DecimalFormat df = new DecimalFormat("#.#");
 		if(radio.getEstado()){
 			if(!radio.getFrecuencia()){
-				lblMhz.setText("AM: " + df.format(radio.getEmisora())+"kHz");
+				lblEmisora.setText("AM: " + df.format(radio.getEmisora())+"kHz");
 			}else{
-				lblMhz.setText("FM: " + df.format(radio.getEmisora())+"MHz");
+				lblEmisora.setText("FM: " + df.format(radio.getEmisora())+"MHz");
 			}
 		}
 	}
