@@ -59,7 +59,7 @@ public class GUI {
 	/**
 	 * Atributo de la interfaz radio
 	 */
-	private iRadio radio;
+	private IRadio radio;
 	
 	/**
 	 * Atributo para guardar emisora

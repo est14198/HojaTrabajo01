@@ -9,7 +9,7 @@
 
 
 
-public class RadioCool implements iRadio {
+public class RadioCool implements IRadio {
 	
 	/**
 	 * Atributos
@@ -113,7 +113,7 @@ public class RadioCool implements iRadio {
 	 * pre: verifica el estado encendido y el estado de la frecuencia
 	 * post: asigna la emisora del indx a la emisora actual
 	 */
-	public void seleccionar(int indx) {
+	public float seleccionar(int indx) {
 		if(encendido){
 			if(!frecuencia){
 				if(emisorasFavoritasAM[indx] != 0){
@@ -125,6 +125,7 @@ public class RadioCool implements iRadio {
 				}
 			}
 		}
+		return emisora;
 	}
 
 	@Override

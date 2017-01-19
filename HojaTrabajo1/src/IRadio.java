@@ -9,7 +9,7 @@
 
 
 
-public interface iRadio {
+public interface IRadio {
 	
     /**
      * pre: verifica el estado inicial
@@ -44,7 +44,7 @@ public interface iRadio {
      * @param indx
      * post: va a la posicion indicada por indx y regresa la emisora guardada
      */
-    public void seleccionar(int indx) ;
+    public float seleccionar(int indx) ;
     
     
     /**
