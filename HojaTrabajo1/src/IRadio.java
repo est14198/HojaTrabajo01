@@ -41,26 +41,30 @@ public interface IRadio {
     
     
     /**
-     * @param indx
+     * @param indx se le ingresa el numero de boton seleccionado
+     * @return estacion seleccionada
      * post: va a la posicion indicada por indx y regresa la emisora guardada
      */
     public float seleccionar(int indx) ;
     
     
     /**
+     * @return estado actual del radio
      * post: regresa el estado actual (si esta encendido o apagado)
      */
     public boolean getEstado() ;
     
     
     /**
+     * @return frecuencia actual del radio
      * post: regresa la frecuencia actual (si es AM o FM)
      */
     public boolean getFrecuencia() ;
     
     
     /**
-     * post: regresa la emisora actual actual
+     * @return numero de emisora actual
+     * post: regresa la emisora actual
      */
     public float getEmisora();
 }

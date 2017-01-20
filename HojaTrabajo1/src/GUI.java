@@ -68,7 +68,8 @@ public class GUI {
 	
 
 	/**
-	 * Launch the application.
+	 * @param args
+	 * * Launch the application.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
